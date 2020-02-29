@@ -4,22 +4,33 @@
       = link_to "#" do
         = image_tag src="logo.png", size: "180x40"
 
-    .signup-main
-    
-      .signup-content
-        .signup-content__title
-          %h1 新規会員登録
-        .signup-content__form
-          .signup-content__btns
-            .signup-content__btn
-              = link_to "#", class: "default-btn signup-content__btn--email" do
-                =icon('fab', 'envelope', class: "signup-content__btn--email-icon")
-                メールアドレスで登録する
-              = link_to "#", class: "default-btn sns-btn signup-content__btn--facebook" do
-                =icon('fab', 'facebook-square', class: "signup-content__btn--facebook-icon")
-                Facebookで登録する
-              = link_to "#", class: "default-btn sns-btn signup-content__btn--google" do
-                =icon('fab', 'google', class: "signup-content__btn--google-icon")
-                Googleで登録する
+  .signup-main
+    .signup-content
+      .signup-content__title
+        %h2 新規会員登録
+      .signup-content__form
+        .signup-content__btns
+          .signup-content__btn
+            = link_to "#", class: "default-btn signup-content__btn--email" do
+              =icon('far', 'envelope', class: "signup-content__btn--email-icon")
+              メールアドレスで登録する
+            = link_to "#", class: "default-btn signup-content__btn--facebook" do
+              =icon('fab', 'facebook-square', class: "signup-content__btn--facebook-icon")
+              Facebookで登録する
+            = link_to "#", class: "default-btn signup-content__btn--google" do
+              =icon('fab', 'google', class: "signup-content__btn--google-icon")
+              Googleで登録する
 
   .signup-footer
+    %nav
+      %ul.footer-links
+        %li
+          =link_to "プライバシーポリシー","#"
+        %li
+          =link_to "利用契約", "#"
+        %li 
+          =link_to "特定商取引に関する表記", "#"
+    .signup-footer__logo
+      =link_to image_tag "logo-white.png", size: "180x40"
+    %p.inc
+      ©︎Furima,Inc.
